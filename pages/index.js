@@ -1,6 +1,7 @@
 import theme from '@hackclub/theme';
 import { NavLink, Box, jsx, Text, Link, Image, Heading, Container } from 'theme-ui';
 import Head from 'next/head';
+import Content from '../components/index-content.mdx';
 
 export default function Page(){
     return (
@@ -9,7 +10,7 @@ export default function Page(){
                 <title>MEA Hack Club</title>
                 <link rel="shortcut icon" href="/static/favicon.ico"/>
             </Head>
-            <Container sx={{position:'absolute'}}>
+            <Container sx={{position:'absolute', top:[1,2],width:[100,200]}}>
                 <Image height="100" width="100" src="images/logo.png"/>
             </Container>
             <Box sx={{ bg: 'sheet', color:'text'}} as="header">
@@ -23,6 +24,9 @@ export default function Page(){
                     </Text>
                 </Container>
             </Box>
+            <Container sx={{ textAlign:'center' }}>
+                <Content/>
+            </Container>
             
         </div>
     );
